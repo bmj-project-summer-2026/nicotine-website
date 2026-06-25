@@ -49,18 +49,13 @@ body {
 
 /* ---- Hero (background artwork) ---- */
 .hero {
-  height: 90vh;
+  height: 100vh;
+  width: 100%;
   background-image: url("images/brain-hero.jpg");
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  text-align: center;
-  padding-top: 3rem;
+  background-repeat: no-repeat;
 }
-
-
 
 /* ---- Zoomed brain section (built out in the next step) ---- */
 .brain-zoom {
