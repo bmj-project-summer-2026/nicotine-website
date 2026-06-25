@@ -16,6 +16,9 @@ body {
 .site-header {
   background-color: #ce55a5;
   padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .site-nav {
@@ -36,6 +39,14 @@ body {
   text-decoration: underline;
 }
 
+.site-title {
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+}
+
 /* ---- Hero (background artwork) ---- */
 .hero {
   height: 90vh;
@@ -43,14 +54,10 @@ body {
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   text-align: center;
-}
-
-.hero-title {
-  font-size: clamp(1.8rem, 5vw, 3.5rem);
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  padding-top: 3rem;
 }
 
 /* ---- Zoomed brain section (built out in the next step) ---- */
