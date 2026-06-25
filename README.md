@@ -5,4 +5,4 @@ with clickable hotspots on brain regions that show informational blurbs.
 ## Tech
 Plain HTML, CSS, and JavaScript — no build tools or frameworks.
 ## How to run locally
-Just open `index.html` in a browser. No installation needed.
+Just open `index.html' in a browser. No installation needed.
