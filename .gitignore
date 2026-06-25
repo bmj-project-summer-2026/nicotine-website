@@ -1,1 +1,12 @@
 #whatevengoeshere hahaha
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+.idea/
+
+# In case you add tooling later
+node_modules/
+.env
