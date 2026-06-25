@@ -60,12 +60,7 @@ body {
   padding-top: 3rem;
 }
 
-.hero img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
+
 
 /* ---- Zoomed brain section (built out in the next step) ---- */
 .brain-zoom {
