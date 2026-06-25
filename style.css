@@ -1,0 +1,65 @@
+/* ---- Base ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* ---- Header / Nav ---- */
+.site-header {
+  background-color: #ce55a5;
+  padding: 1rem 2rem;
+}
+
+.site-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.site-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Hero (background artwork) ---- */
+.hero {
+  height: 90vh;
+  background-image: url("images/brain-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* ---- Zoomed brain section (built out in the next step) ---- */
+.brain-zoom {
+  min-height: 100vh;
+  background-color: #000;
+}
+
+/* ---- About ---- */
+.about {
+  padding: 4rem 2rem;
+}
