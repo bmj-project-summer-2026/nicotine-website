@@ -62,7 +62,7 @@ body {
 .hero-pin {
   position: sticky;
   top: 0px; /* matches header height */
-  height: 100%;
+  height: calc(100vh - 70px);
   overflow: visible;
   background-image: url("brickwall.png");
   background-size: cover;
