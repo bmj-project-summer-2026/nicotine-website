@@ -33,8 +33,6 @@ body {
 .site-nav a {
   color: #fff;
   text-decoration: none;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
   font-size: 1.1rem;
   letter-spacing: 0.05em;
 }
@@ -45,69 +43,114 @@ body {
 
 .site-title {
   color: #fff;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
   font-size: 1.1rem;
   letter-spacing: 0.05em;
 }
 
-/* ---- Hero (layered artwork) ---- */
-/* This wrapper is taller than the screen so there's room to scroll
-   while the visuals stay pinned in place underneath. */
+/* ---- Hero Section ---- */
 .hero-wrapper {
   position: relative;
   height: 200vh;
 }
 
-/* The pinned viewport. Sticks right below the header while the
-   wrapper above scrolls past it. The brick wall lives here as a
-   plain background image - it never needs to move or fade. */
 .hero-pin {
   position: sticky;
-  top: 70px; /* matches header height */
+  top: 70px;
   height: calc(100vh - 70px);
-  overflow: visible;
-  background-image: url("brickwall.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
+/* Base image (brickbrain) */
 .bricky {
-  position: fixed;
-  left: 0%;
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  transform: translate(-50%, 0%)
   object-fit: cover;
 }
 
-/* The nicotine graphic and brain stack on top of the brick wall.
-   No z-index needed - later elements in the HTML simply paint
-   on top of earlier ones. */
+/* Nicotine overlay */
 .layer {
-  position: fixed;
-  left: 0%;
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  transform: translate(-50%, 0%)
   object-fit: cover;
 }
-
-/*.mainbrain {
-  position: fixed;
-  object-fit: contain;
-  display: block;
-  top: 50%;
-  left: 50%;
-  transform: scale(1.35) translate(-35%, -25%);
-}*/
 
 #nicotineLayer {
+  opacity: 1;
   transition: opacity 0.1s linear;
 }
 
-/* ---- Zoomed brain section (built out in the next step) ---- */
+/* ---- Hotspots ---- */
+.hotspot {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #f3c742;
+  border: 3px solid white;
+  box-shadow: 0 0 14px rgba(243, 199, 66, 0.8);
+  cursor: pointer;
+  z-index: 50;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+/* Example hotspot position — adjust later */
+.hotspot-1 {
+  top: 42%;
+  left: 54%;
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  bottom: 42px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 340px;
+  background: rgba(0, 0, 0, 0.92);
+  color: white;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  font-weight: normal;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+/* Show tooltip on hover */
+.hotspot:hover .tooltip {
+  opacity: 1;
+}
+
+/* Pulsing animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.hotspot {
+  animation: pulse 1.5s infinite;
+}
+
+/* ---- Zoomed brain section ---- */
 .brain-zoom {
   min-height: 100vh;
   background-color: #000;
