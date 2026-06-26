@@ -56,6 +56,11 @@ body {
   height: 200vh;
 }
 
+.hero-wrapper img {
+  position: absolute;
+  pointer-events: none;
+}
+
 /* The pinned viewport. Sticks right below the header while the
    wrapper above scrolls past it. */
 .hero-pin {
