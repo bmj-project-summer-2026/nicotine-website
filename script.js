@@ -43,7 +43,7 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 if (heroWrapper) {
-  observer.observe(heroWrapper);
+  observer.observe(brainSection);
 
   window.addEventListener("scroll", updateHeroFade);
   window.addEventListener("resize", updateHeroFade);
