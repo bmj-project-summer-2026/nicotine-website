@@ -139,7 +139,7 @@ body {
 }
 
 .hotspot1btn{
-  width: 140px;
+  width: 40px;
   height: 40px;
   background-color: #ce55a5;
   color: white;
@@ -166,7 +166,7 @@ body {
   color: white;
   border-radius: 4px;
   
-  width: 220px;
+  width: 400px;
   z-index: 11;
   
   /* Hidden states */
@@ -185,13 +185,13 @@ body {
 
 .hotspot3 {
   position: absolute;
-  top: 30%;
-  left: 45%;
+  top: 50%;
+  left: 40%;
   transform: translate(-50%, -50%);
   z-index: 30;
 }
 .hotspot3btn {
-  width: 140px;
+  width: 40px;
   height: 40px;
   background-color: #ce55a5;
   color: white;
@@ -213,7 +213,7 @@ body {
   background-color: #333;
   color: white;
   border-radius: 4px;
-  width: 220px;
+  width: 400px;
   z-index: 31;
   opacity: 0;
   visibility: hidden;
@@ -226,13 +226,13 @@ body {
  
 .hotspot4 {
   position: absolute;
-  top: 60%;
-  left: 40%;
+  top: 63%;
+  left: 53%;
   transform: translate(-50%, -50%);
   z-index: 30;
 }
 .hotspot4btn {
-  width: 140px;
+  width: 40px;
   height: 40px;
   background-color: #ce55a5;
   color: white;
@@ -254,7 +254,7 @@ body {
   background-color: #333;
   color: white;
   border-radius: 4px;
-  width: 220px;
+  width: 400px;
   z-index: 31;
   opacity: 0;
   visibility: hidden;
@@ -267,13 +267,13 @@ body {
  
 .hotspot5 {
   position: absolute;
-  top: 50%;
-  left: 65%;
+  top: 75%;
+  left: 57%;
   transform: translate(-50%, -50%);
   z-index: 30;
 }
 .hotspot5btn {
-  width: 140px;
+  width: 40px;
   height: 40px;
   background-color: #ce55a5;
   color: white;
@@ -295,7 +295,7 @@ body {
   background-color: #333;
   color: white;
   border-radius: 4px;
-  width: 220px;
+  width: 400px;
   z-index: 31;
   opacity: 0;
   visibility: hidden;
