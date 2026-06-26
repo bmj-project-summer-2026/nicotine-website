@@ -75,7 +75,7 @@ body {
    on top of earlier ones. */
 .layer {
   position: absolute;
-  left: 50%;
+  left: 0%;
   width: 100%;
   height: 100%;
   transform: translate(-50%, 0%)
