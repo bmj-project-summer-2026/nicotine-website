@@ -86,7 +86,7 @@ body {
    No z-index needed - later elements in the HTML simply paint
    on top of earlier ones. */
 .layer {
-  position: absolute;
+  position: fixed;
   left: 0%;
   width: 100%;
   height: 100%;
