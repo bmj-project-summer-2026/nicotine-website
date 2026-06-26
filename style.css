@@ -107,6 +107,18 @@ body {
 #nicotineLayer {
   transition: opacity 0.1s linear;
 }
+.partsbrain-layer {
+  position: fixed;
+  top: 45%;
+  left: 55%;
+  width: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.1s linear;
+  z-index: 20;
+}
 
 /* ---- Zoomed brain section (built out in the next step) ---- */
 .brain-zoom {
