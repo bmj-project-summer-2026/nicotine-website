@@ -118,6 +118,7 @@ body {
   opacity: 0;
   transition: opacity 0.1s linear;
   z-index: 20;
+  pointer-events: none;   
 }
 
 /* ---- Zoomed brain section (built out in the next step) ---- */
