@@ -109,9 +109,9 @@ body {
 }
 .partsbrain-layer {
   position: fixed;
-  top: 75%;
-  left: 55%;
-  width: 80%;
+  top: 65%;
+  left: 65%;
+  width: 85%;
   height: 70%;
   transform: translate(-50%, -50%);
   object-fit: contain;
