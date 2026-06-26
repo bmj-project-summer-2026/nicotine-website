@@ -25,7 +25,20 @@ function updateHeroFade() {
   // Fade the nicotine layer out as progress increases
   nicotineLayer.style.opacity = 1 - progress;
 }
+const hotspot = document.querySelector(".hotspot1");
+const brainSection = document.querySelector(".hero-wrapper");
 
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      hotspot.classList.add("show");
+    }
+  });
+}, {
+  threshold: 0.5
+});
+
+observer.observe(brainSection);
 window.addEventListener("scroll", updateHeroFade);
 window.addEventListener("resize", updateHeroFade);
 updateHeroFade(); // run once on load
