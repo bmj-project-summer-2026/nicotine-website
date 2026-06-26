@@ -33,18 +33,29 @@ function updateHeroFade() {
   const nicotineProgress = mapRange(progress, 0, 0.4);
   nicotineLayer.style.opacity = 1 - nicotineProgress;
 
+  let hotspotOpacity;
+  if (progress <= 0.4) {
+    hotspotOpacity = 0;
+  } else if (progress <= 0.6) {
+    hotspotOpacity = mapRange(progress, 0.4, 0.6); // 0 -> 1
+  } else {
+    hotspotOpacity = 1 - mapRange(progress, 0.6, 1); // 1 -> 0
+  }
+ 
   const stage2Progress = mapRange(progress, 0.6, 1);
-
-   if (hotspot1) {
-    hotspot1.style.opacity = 1 - stage2Progress;
-    hotspot1.style.pointerEvents = stage2Progress >= 1 ? "none" : "auto";
-   }
-  
+ 
+  if (hotspot1) {
+    hotspot1.style.opacity = hotspotOpacity;
+    // Only clickable/hoverable while actually visible.
+    hotspot1.style.pointerEvents = hotspotOpacity > 0 ? "auto" : "none";
+  }
+ 
   if (partsbrainLayer) {
     partsbrainLayer.style.opacity = stage2Progress;
   }
 }
-
+ 
 window.addEventListener("scroll", updateHeroFade);
 window.addEventListener("resize", updateHeroFade);
 updateHeroFade(); // run once on load
+ 
