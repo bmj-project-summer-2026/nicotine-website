@@ -52,7 +52,7 @@ body {
 /* This wrapper is taller than the screen so there's room to scroll
    while the visuals stay pinned in place underneath. */
 .hero-wrapper {
-  position: relative;
+  position: absolute;
   height: 200vh;
 }
 
