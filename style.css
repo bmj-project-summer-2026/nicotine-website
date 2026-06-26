@@ -17,6 +17,7 @@ body {
   background-color: #ce55a5;
   height: 70px;
   position: sticky;
+  top: 0;
   padding: 0 2rem;
   display: flex;
   align-items: center;
