@@ -115,33 +115,42 @@ body {
   display: inline-block;
 }
 
+/*HOTSPOT BUTTON (must be positioned on brain via top/left later) */
+.hotspot1 {
+  position: absolute;
+  top: 45%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+
 .hotspot1btn{
-  padding: 10px 20px;
+  width: 140px;
+  height: 40px;
   background-color: #ce55a5;
   color: white;
   border: none;
   cursor: pointer;
   border-radius: 4px;
-  width: 140px; 
-  height: 40px; 
-  background-color: #ce55a5;    
-  display: inline-flex;   
+
+  display: flex;
   align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  position: relative;
+  justify-content: center; 
+  
+  position: relative; /* keep ONLY if tooltip is inside */
 }
 
 .hotspot1txt {
-  position: relative;
-  top: 100%;       /* Positions it directly below the button */
-  left: 0;
+  position: absolute;
+  top: 110%;       /* Positions it directly below the button */
+  left: 50%;
+  transform: translateX(-50%);
+  
   margin-top: 8px;
   padding: 12px;
   background-color: #333;
   color: white;
   border-radius: 4px;
-  width: 200px;
+  
+  width: 220px;
   z-index: 10;
   
   /* Hidden states */
@@ -153,7 +162,7 @@ body {
 }
 
 /* When the user hovers over the container, show the text box */
-.brain-zoom:hover .hotspot1txt {
+.hotspot1:hover .hotspot1txt {
   opacity: 1;
   visibility: visible;
 }
