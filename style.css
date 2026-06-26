@@ -183,6 +183,128 @@ body {
   visibility: visible;
 }
 
+.hotspot3 {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+}
+.hotspot3btn {
+  width: 140px;
+  height: 40px;
+  background-color: #ce55a5;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.hotspot3txt {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+  padding: 12px;
+  background-color: #333;
+  color: white;
+  border-radius: 4px;
+  width: 220px;
+  z-index: 31;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.hotspot3:hover .hotspot3txt {
+  opacity: 1;
+  visibility: visible;
+}
+ 
+.hotspot4 {
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+}
+.hotspot4btn {
+  width: 140px;
+  height: 40px;
+  background-color: #ce55a5;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.hotspot4txt {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+  padding: 12px;
+  background-color: #333;
+  color: white;
+  border-radius: 4px;
+  width: 220px;
+  z-index: 31;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.hotspot4:hover .hotspot4txt {
+  opacity: 1;
+  visibility: visible;
+}
+ 
+.hotspot5 {
+  position: absolute;
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+}
+.hotspot5btn {
+  width: 140px;
+  height: 40px;
+  background-color: #ce55a5;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.hotspot5txt {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 8px;
+  padding: 12px;
+  background-color: #333;
+  color: white;
+  border-radius: 4px;
+  width: 220px;
+  z-index: 31;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.hotspot5:hover .hotspot5txt {
+  opacity: 1;
+  visibility: visible;
+}
 /* ---- About ---- */
 .about {
   padding: 4rem 2rem;
