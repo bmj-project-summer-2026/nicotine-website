@@ -52,62 +52,42 @@ body {
 }
 
 /* ---- Hero (layered artwork) ---- */
-/* This wrapper is taller than the screen so there's room to scroll
-   while the visuals stay pinned in place underneath. */
 .hero-wrapper {
   position: relative;
   height: 200vh;
 }
 
-/* The pinned viewport. Sticks right below the header while the
-   wrapper above scrolls past it. The brick wall lives here as a
-   plain background image - it never needs to move or fade. */
 .hero-pin {
   position: sticky;
-  top: 70px; /* matches header height */
+  top: 70px;
   height: calc(100vh - 70px);
-  overflow: visible;
-  background-image: url("brickwall.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
-.bricky {
-  position: fixed;
-  left: 0%;
+/* Base image: brick wall + brain combined */
+.brickbrain {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  transform: translate(-50%, 0%)
   object-fit: cover;
 }
 
-/* The nicotine graphic and brain stack on top of the brick wall.
-   No z-index needed - later elements in the HTML simply paint
-   on top of earlier ones. */
+/* Overlay layers (nicotine image etc.) */
 .layer {
-  position: fixed;
-  left: 0%;
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-  transform: translate(-50%, 0%)
   object-fit: cover;
 }
-
-/*.mainbrain {
-  position: fixed;
-  object-fit: contain;
-  display: block;
-  top: 50%;
-  left: 50%;
-  transform: scale(1.35) translate(-35%, -25%);
-}*/
 
 #nicotineLayer {
+  opacity: 1;
   transition: opacity 0.1s linear;
 }
 
-/* ---- Zoomed brain section (built out in the next step) ---- */
+/* ---- Zoomed brain section ---- */
 .brain-zoom {
   min-height: 100vh;
   background-color: #000;
