@@ -15,7 +15,8 @@ body {
 /* ---- Header / Nav ---- */
 .site-header {
   background-color: #ce55a5;
-  padding: 1rem 2rem;
+  height: 70px;
+  padding: 0 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -47,14 +48,43 @@ body {
   letter-spacing: 0.05em;
 }
 
-/* ---- Hero (background artwork) ---- */
-.hero {
-  height: 100vh;
+/* ---- Hero (layered artwork) ---- */
+/* This wrapper is taller than the screen so there's room to scroll
+   while the visuals stay pinned in place underneath. */
+.hero-wrapper {
+  position: relative;
+  height: 200vh;
+}
+
+/* The pinned viewport. Sticks right below the header while the
+   wrapper above scrolls past it. */
+.hero-pin {
+  position: sticky;
+  top: 70px; /* matches header height */
+  height: calc(100vh - 70px);
+  overflow: hidden;
+}
+
+/* All three images stack exactly on top of each other. */
+.layer {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  background-image: url("images/brain-hero.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  height: 100%;
+  object-fit: cover;
+}
+
+.layer-bg {
+  z-index: 1; /* brick wall: bottom */
+}
+
+.layer-mid {
+  z-index: 2; /* nicotine graphic: fades out on scroll */
+  transition: opacity 0.1s linear;
+}
+
+.layer-top {
+  z-index: 3; /* brain: stays on top */
 }
 
 /* ---- Zoomed brain section (built out in the next step) ---- */
