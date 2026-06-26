@@ -29,8 +29,6 @@ function updateHeroFade() {
   nicotineLayer.style.opacity = 1 - progress;
 }
 
-window.addEventListerner("scroll",updateHeroFade);
-
 // --- HOTSPOT REVEAL ---
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -42,7 +40,7 @@ const observer = new IntersectionObserver((entries) => {
   threshold: 0.5
 });
 
-if (heroWrapper) {
+if (heroWrapper && brainSection) {
   observer.observe(brainSection);
 
   window.addEventListener("scroll", updateHeroFade);
