@@ -7,7 +7,7 @@
 
 body {
   background-color: #000;
-  font-family: "Courier New", Courier, monospace;
+  font-family: Georgia, serif;
   font-weight: bold;
   color: #fff;
 }
@@ -33,7 +33,7 @@ body {
 .site-nav a {
   color: #fff;
   text-decoration: none;
-  font-family: "Courier New", Courier, monospace;
+  font-family: Georgia, serif;
   font-weight: bold;
   font-size: 1.1rem;
   letter-spacing: 0.05em;
@@ -45,7 +45,7 @@ body {
 
 .site-title {
   color: #fff;
-  font-family: "Courier New", Courier, monospace;
+  font-family: Georgia, serif;
   font-weight: bold;
   font-size: 1.1rem;
   letter-spacing: 0.05em;
@@ -304,6 +304,13 @@ body {
 .hotspot5:hover .hotspot5txt {
   opacity: 1;
   visibility: visible;
+}
+
+.hotspot1:hover,
+.hotspot3:hover,
+.hotspot4:hover,
+.hotspot5:hover {
+  z-index: 100;
 }
 /* ---- About ---- */
 .about {
