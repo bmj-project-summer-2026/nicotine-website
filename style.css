@@ -58,10 +58,6 @@ body {
 
 .hero-wrapper img {
   position: relative;
-  pointer-events: none;
-  top: 0;
-  left: 0;
-  width: 100%;
 }
 
 /* The pinned viewport. Sticks right below the header while the
