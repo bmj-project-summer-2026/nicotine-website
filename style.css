@@ -63,7 +63,7 @@ body {
    wrapper above scrolls past it. The brick wall lives here as a
    plain background image - it never needs to move or fade. */
 .hero-pin {
-  position: relative;
+  position: sticky;
   top: 70px; /* matches header height */
   height: calc(100vh - 70px);
   overflow: visible;
