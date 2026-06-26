@@ -16,6 +16,7 @@ body {
 .site-header {
   background-color: #ce55a5;
   height: 70px;
+  position: sticky;
   padding: 0 2rem;
   display: flex;
   align-items: center;
