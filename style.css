@@ -94,14 +94,14 @@ body {
   object-fit: cover;
 }
 
-.mainbrain {
+/*.mainbrain {
   position: fixed;
   object-fit: contain;
   display: block;
   top: 50%;
   left: 50%;
   transform: scale(1.35) translate(-35%, -25%);
-}
+}*/
 
 #nicotineLayer {
   transition: opacity 0.1s linear;
