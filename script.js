@@ -5,6 +5,14 @@ console.log("Nicotine Effects: The Brain — loaded");
 // --- Fade out the "Nicotine Affects You" layer as the user scrolls ---
 const heroWrapper = document.querySelector(".hero-wrapper");
 const nicotineLayer = document.getElementById("nicotineLayer");
+const hotspot1 = document.querySelector(".hotspot1");
+const partsbrainLayer = document.getElementById("partsbrainLayer");
+
+function mapRange(value, zoneStart, zoneEnd) {
+  if (value <= zoneStart) return 0;
+  if (value >= zoneEnd) return 1;
+  return (value - zoneStart) / (zoneEnd - zoneStart);
+}
 
 function updateHeroFade() {
   if (!heroWrapper || !nicotineLayer) return;
@@ -22,10 +30,19 @@ function updateHeroFade() {
   let progress = scrolled / maxScroll;
   progress = Math.min(Math.max(progress, 0), 1);
 
-  // Fade the nicotine layer out as progress increases
-  nicotineLayer.style.opacity = 1 - progress;
-  htspt1btn.style.opacity = 2*progress - 1;
-  htspt1txt.style.opacity = 2*progress - 1;
+  const nicotineProgress = mapRange(progress, 0, 0.4);
+  nicotineLayer.style.opacity = 1 - nicotineProgress;
+
+  const stage2Progress = mapRange(progress, 0.6, 1);
+
+   if (hotspot1) {
+    hotspot1.style.opacity = 1 - stage2Progress;
+    hotspot1.style.pointerEvents = stage2Progress >= 1 ? "none" : "auto";
+   }
+  
+  if (partsbrainLayer) {
+    partsbrainLayer.style.opacity = stage2Progress;
+  }
 }
 
 window.addEventListener("scroll", updateHeroFade);
