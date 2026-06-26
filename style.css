@@ -84,9 +84,8 @@ body {
 
 .mainbrain {
   position: absolute;
-  justify-content: center;
-  align-items: center;
   object-fit: contain;
+  transform: translate(50vh, 50vh);
 }
 
 #nicotineLayer {
