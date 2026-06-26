@@ -5,9 +5,6 @@ console.log("Nicotine Effects: The Brain — loaded");
 // --- Fade out the "Nicotine Affects You" layer as the user scrolls ---
 const heroWrapper = document.querySelector(".hero-wrapper");
 const nicotineLayer = document.getElementById("nicotineLayer");
-const hotspot = document.querySelector(".hotspot1");
-
-// --- FADE NICOTINE ON SCROLL ---
 
 function updateHeroFade() {
   if (!heroWrapper || !nicotineLayer) return;
@@ -29,22 +26,6 @@ function updateHeroFade() {
   nicotineLayer.style.opacity = 1 - progress;
 }
 
-// --- HOTSPOT REVEAL ---
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting && hotspot) {
-      hotspot.classList.add("show");
-    }
-  });
-}, {
-  threshold: 0.5
-});
-
-if (heroWrapper && brainSection) {
-  observer.observe(brainSection);
-
-  window.addEventListener("scroll", updateHeroFade);
-  window.addEventListener("resize", updateHeroFade);
-
-  updateHeroFade(); // run once on load
-}
+window.addEventListener("scroll", updateHeroFade);
+window.addEventListener("resize", updateHeroFade);
+updateHeroFade(); // run once on load
