@@ -82,6 +82,13 @@ body {
   object-fit: cover;
 }
 
+.mainbrain {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+}
+
 #nicotineLayer {
   transition: opacity 0.1s linear;
 }
