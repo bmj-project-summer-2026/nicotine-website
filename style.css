@@ -83,11 +83,10 @@ body {
 }
 
 .mainbrain {
-  position: absolute;
+  position: fixed;
   object-fit: contain;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
 #nicotineLayer {
