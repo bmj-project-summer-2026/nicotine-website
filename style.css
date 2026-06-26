@@ -65,7 +65,7 @@ body {
 }
 
 /* Base image: brick wall + brain combined */
-.brickbrain {
+.bricky {
   position: absolute;
   inset: 0;
   width: 100%;
