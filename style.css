@@ -52,13 +52,15 @@ body {
 /* This wrapper is taller than the screen so there's room to scroll
    while the visuals stay pinned in place underneath. */
 .hero-wrapper {
-  position: absolute;
+  position: relative;
   height: 200vh;
 }
 
 .hero-wrapper img {
-  position: absolute;
+  position: relative;
   pointer-events: none;
+  top: 0;
+  left: 0;
 }
 
 /* The pinned viewport. Sticks right below the header while the
