@@ -100,7 +100,7 @@ body {
   display: block;
   top: 50%;
   left: 50%;
-  transform: scale(1.1) translate(-45%, -25%);
+  transform: scale(1.35) translate(-35%, -25%);
 }
 
 #nicotineLayer {
