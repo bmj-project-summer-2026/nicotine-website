@@ -72,7 +72,7 @@ body {
 
 /* All three images stack exactly on top of each other. */
 .layer {
-  position: absolute;
+  position: relative;
   inset: 0;
   width: 100%;
   height: 100%;
