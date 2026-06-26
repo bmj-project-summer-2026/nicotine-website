@@ -24,7 +24,8 @@ function updateHeroFade() {
 
   // Fade the nicotine layer out as progress increases
   nicotineLayer.style.opacity = 1 - progress;
-  htspt1btn.style.opacity = 2*progress - 0.5;
+  htspt1btn.style.opacity = 2*progress - 1;
+  htspt1txt.style.opacity = 2*progress - 1;
 }
 
 window.addEventListener("scroll", updateHeroFade);
