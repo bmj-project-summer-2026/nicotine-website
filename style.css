@@ -63,7 +63,7 @@ body {
    plain background image - it never needs to move or fade. */
 .hero-pin {
   position: sticky;
-  top: 0px; /* matches header height */
+  top: 70px; /* matches header height */
   height: calc(100vh - 70px);
   overflow: visible;
   background-image: url("brickwall.png");
