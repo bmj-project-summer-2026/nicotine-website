@@ -94,14 +94,6 @@ body {
   object-fit: cover;
 }
 
-.partsbrain {
-  position: absolute;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 200;
-}
 
 /*.mainbrain {
   position: fixed;
