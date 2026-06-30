@@ -110,7 +110,7 @@ body {
 
 .home-hero-wrapper {
   position: relative;
-  height: 150vh; /* scroll distance for the transition */
+  height: 250vh; /* more scroll distance, gives the fade more room */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -139,6 +139,53 @@ body {
   transform: scale(1.15);
 }
 
+/* ---- Homepage: 4-step loop diagram ---- */
+.loop-wrapper {
+  position: relative;
+  height: 150vh; /* scroll distance to trigger the fade-in */
+}
+
+.loop-content {
+  position: sticky;
+  top: 100px;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.loop-arrows {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+}
+
+.loop-step {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 140px;
+}
+
+.loop-step-1 { top: -20px; left: 50%; transform: translateX(-50%); }
+.loop-step-2 { top: 50%; left: calc(50% + 200px); transform: translate(-50%, -50%); }
+.loop-step-3 { top: calc(50% + 200px); left: 50%; transform: translate(-50%, -50%); }
+.loop-step-4 { top: 50%; left: calc(50% - 200px); transform: translate(-50%, -50%); }
+
+.loop-number {
+  font-size: 2rem;
+  color: #ce55a5;
+}
+
+.loop-label {
+  font-size: 1.1rem;
+  margin-top: 0.25rem;
+}
+
 /* ---- Brain page: blackbrain as the static full-screen backdrop ---- */
 .brain-page-pin {
   background-image: url("blackbrain.png");
@@ -149,10 +196,10 @@ body {
 
 .partsbrain-layer {
   position: fixed;
-  top: 66%;
-  left: 52.5%;
-  width: 94%;
-  height: 88%;
+  top: 71%;
+  left: 53%;
+  width: 90%;
+  height: 80%;
   transform: translate(-50%, -50%);
   object-fit: contain;
   opacity: 0;
@@ -160,7 +207,6 @@ body {
   z-index: 20;
   pointer-events: none;   
 }
-
 
 /* ---- Zoomed brain section (built out in the next step) ---- */
 .brain-zoom {
@@ -269,7 +315,7 @@ body {
  
 .hotspot4 {
   position: absolute;
-  top: 58%;
+  top: 63%;
   left: 53%;
   transform: translate(-50%, -50%);
   z-index: 30;
@@ -312,7 +358,7 @@ body {
  
 .hotspot5 {
   position: absolute;
-  top: 72%;
+  top: 75%;
   left: 57%;
   transform: translate(-50%, -50%);
   z-index: 30;
