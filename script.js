@@ -41,6 +41,7 @@ function updateHeroFade() {
   const blackbrainProgress = mapRange(progress, NICOTINE_FADE_END, BLACKBRAIN_FADE_END);
   if (blackbrainLayer) {
     blackbrainLayer.style.opacity = blackbrainProgress;
+    blackbrainLayer.style.transform = `scale(${0.85 + blackbrainProgress * 0.15})`;
   }
 
   // Hotspot1: hidden -> fades in (once blackbrain is visible) -> fades back out
