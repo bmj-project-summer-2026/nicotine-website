@@ -139,29 +139,27 @@ body {
   transform: scale(1.15);
 }
 
-/* ---- Homepage: 4-step loop diagram ---- */
-.loop-wrapper {
-  position: relative;
-  height: 150vh; /* scroll distance to trigger the fade-in */
-}
-
+/* ---- Homepage: 4-step loop diagram (overlaid on blackbrain) ---- */
 .loop-content {
-  position: sticky;
-  top: 100px;
-  width: 400px;
-  height: 400px;
-  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 380px;
+  height: 380px;
+  transform: translate(-50%, -50%);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   transition: opacity 0.5s ease;
+  z-index: 10;
+  pointer-events: none;
 }
 
 .loop-arrows {
   position: absolute;
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
 }
 
 .loop-step {
@@ -170,21 +168,21 @@ body {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  width: 140px;
+  width: 130px;
 }
 
-.loop-step-1 { top: -20px; left: 50%; transform: translateX(-50%); }
-.loop-step-2 { top: 50%; left: calc(50% + 200px); transform: translate(-50%, -50%); }
-.loop-step-3 { top: calc(50% + 200px); left: 50%; transform: translate(-50%, -50%); }
-.loop-step-4 { top: 50%; left: calc(50% - 200px); transform: translate(-50%, -50%); }
+.loop-step-1 { top: -25px; left: 50%; transform: translateX(-50%); }
+.loop-step-2 { top: 50%; left: calc(50% + 190px); transform: translate(-50%, -50%); }
+.loop-step-3 { top: calc(50% + 190px); left: 50%; transform: translate(-50%, -50%); }
+.loop-step-4 { top: 50%; left: calc(50% - 190px); transform: translate(-50%, -50%); }
 
 .loop-number {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #ce55a5;
 }
 
 .loop-label {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-top: 0.25rem;
 }
 
