@@ -111,14 +111,14 @@ body {
 .home-hero-wrapper {
   position: relative;
   height: 150vh; /* scroll distance for the transition */
-  max-width: 600px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .home-hero-pin {
   position: sticky;
   top: 180px; /* sits below the taller header + title */
-  height: 60vh;
+  height: 85vh;
   overflow: hidden;
   border-radius: 8px;
   background-color: #000; /* fills any empty space from object-fit: contain */
