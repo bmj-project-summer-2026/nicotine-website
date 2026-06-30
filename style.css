@@ -107,6 +107,20 @@ body {
 #nicotineLayer {
   transition: opacity 0.1s linear;
 }
+
+.blackbrain-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.1s linear;
+  z-index: 5;
+  pointer-events: none;
+}
+
 .partsbrain-layer {
   position: fixed;
   top: 71%;
