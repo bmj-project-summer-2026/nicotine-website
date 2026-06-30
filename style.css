@@ -56,7 +56,7 @@ body {
    while the visuals stay pinned in place underneath. */
 .hero-wrapper {
   position: relative;
-  height: 200vh;
+  height: 400vh;
 }
 
 /* The pinned viewport. Sticks right below the header while the
