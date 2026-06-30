@@ -13,10 +13,9 @@ const hotspot5 = document.querySelector(".hotspot5");
 // Adjust these numbers to retime any stage without touching the logic below.
 const NICOTINE_FADE_END = 0.2;       // 0 -> this: nicotine fades out
 const BLACKBRAIN_FADE_END = 0.3;     // nicotine end -> this: blackbrain fades in
-const HOTSPOT1_FADE_IN_END = 0.45;   // blackbrain end -> this: hotspot1 fades in
-const HOTSPOT1_FADE_OUT_END = 0.65;  // -> this: hotspot1 fades out, partsbrain fades in
-const HOTSPOT345_FADE_IN_START = 0.8; // this -> 1: hotspot3/4/5 fade in
-// (0.65 - 0.8 is a dead zone: partsbrain fully visible, 3/4/5 not yet)
+const HOTSPOT1_FADE_IN_END = 0.4;     // fades in until here
+const HOTSPOT1_HOLD_END = 0.55;       // stays fully visible until here (NEW)
+const HOTSPOT1_FADE_OUT_END = 0.7;    // fades out until here
 
 function mapRange(value, zoneStart, zoneEnd) {
   if (value <= zoneStart) return 0;
