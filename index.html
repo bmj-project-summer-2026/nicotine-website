@@ -25,20 +25,20 @@
         <img src="blackbrain.png" class="home-blackbrain-layer" id="homeBlackbrainLayer" alt="Black brain">
 
         <div class="loop-content" id="loopContent">
-          <svg class="loop-arrows" viewBox="0 0 400 400" aria-hidden="true">
+          <svg class="loop-arrows" viewBox="0 0 1000 1000" aria-hidden="true">
             <defs>
-              <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="6" refY="5" orient="auto">
-                <path d="M0,0 L10,5 L0,10 Z" fill="#ce55a5" />
+              <marker id="arrowhead" markerWidth="14" markerHeight="14" refX="8" refY="7" orient="auto">
+                <path d="M0,0 L14,7 L0,14 Z" fill="#ce55a5" />
               </marker>
             </defs>
-            <!-- 1 (top) -> 2 (right) -->
-            <path d="M 230,60 A 170,170 0 0,1 340,200" fill="none" stroke="#ce55a5" stroke-width="3" marker-end="url(#arrowhead)" />
-            <!-- 2 (right) -> 3 (bottom) -->
-            <path d="M 340,230 A 170,170 0 0,1 230,340" fill="none" stroke="#ce55a5" stroke-width="3" marker-end="url(#arrowhead)" />
-            <!-- 3 (bottom) -> 4 (left) -->
-            <path d="M 170,340 A 170,170 0 0,1 60,230" fill="none" stroke="#ce55a5" stroke-width="3" marker-end="url(#arrowhead)" />
-            <!-- 4 (left) -> 1 (top) -->
-            <path d="M 60,170 A 170,170 0 0,1 170,60" fill="none" stroke="#ce55a5" stroke-width="3" marker-end="url(#arrowhead)" />
+            <!-- 1 (top, 500,375) -> 2 (right, 950,500) -->
+            <path d="M 500,375 Q 850,375 950,500" fill="none" stroke="#ce55a5" stroke-width="4" marker-end="url(#arrowhead)" />
+            <!-- 2 (right, 950,500) -> 3 (bottom, 500,850) -->
+            <path d="M 950,500 Q 800,800 500,850" fill="none" stroke="#ce55a5" stroke-width="4" marker-end="url(#arrowhead)" />
+            <!-- 3 (bottom, 500,850) -> 4 (left, 50,500) -->
+            <path d="M 500,850 Q 150,800 50,500" fill="none" stroke="#ce55a5" stroke-width="4" marker-end="url(#arrowhead)" />
+            <!-- 4 (left, 50,500) -> 1 (top, 500,375) -->
+            <path d="M 50,500 Q 150,375 500,375" fill="none" stroke="#ce55a5" stroke-width="4" marker-end="url(#arrowhead)" />
           </svg>
 
           <div class="loop-step loop-step-1">
