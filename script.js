@@ -21,3 +21,20 @@ function updateHomeFade() {
 window.addEventListener("scroll", updateHomeFade);
 window.addEventListener("resize", updateHomeFade);
 updateHomeFade();
+
+// --- 4-step loop: fades in once it scrolls into view ---
+const loopContent = document.getElementById("loopContent");
+
+if (loopContent) {
+  const loopObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          loopContent.style.opacity = 1;
+        }
+      });
+    },
+    { threshold: 0.4 } // fades in once 40% of it is visible
+  );
+  loopObserver.observe(loopContent);
+}
