@@ -136,6 +136,7 @@ body {
 .home-blackbrain-layer {
   opacity: 0;
   transition: opacity 0.4s ease;
+  transform: scale(1.15);
 }
 
 /* ---- Brain page: blackbrain as the static full-screen backdrop ---- */
@@ -148,10 +149,10 @@ body {
 
 .partsbrain-layer {
   position: fixed;
-  top: 71%;
-  left: 53%;
-  width: 90%;
-  height: 80%;
+  top: 66%;
+  left: 52.5%;
+  width: 94%;
+  height: 88%;
   transform: translate(-50%, -50%);
   object-fit: contain;
   opacity: 0;
@@ -159,6 +160,7 @@ body {
   z-index: 20;
   pointer-events: none;   
 }
+
 
 /* ---- Zoomed brain section (built out in the next step) ---- */
 .brain-zoom {
@@ -267,7 +269,7 @@ body {
  
 .hotspot4 {
   position: absolute;
-  top: 63%;
+  top: 58%;
   left: 53%;
   transform: translate(-50%, -50%);
   z-index: 30;
@@ -310,7 +312,7 @@ body {
  
 .hotspot5 {
   position: absolute;
-  top: 75%;
+  top: 72%;
   left: 57%;
   transform: translate(-50%, -50%);
   z-index: 30;
