@@ -11,11 +11,12 @@ const hotspot5 = document.querySelector(".hotspot5");
 
 // --- Scroll zone boundaries (0 = top of hero, 1 = fully scrolled past) ---
 // Adjust these numbers to retime any stage without touching the logic below.
-const NICOTINE_FADE_END = 0.2;       // 0 -> this: nicotine fades out
-const BLACKBRAIN_FADE_END = 0.3;     // nicotine end -> this: blackbrain fades in
-const HOTSPOT1_FADE_IN_END = 0.4;     // fades in until here
-const HOTSPOT1_HOLD_END = 0.55;       // stays fully visible until here (NEW)
-const HOTSPOT1_FADE_OUT_END = 0.7;    // fades out until here
+const NICOTINE_FADE_END = 0.05;        // fast
+const BLACKBRAIN_FADE_END = 0.2;       // fast
+const HOTSPOT1_FADE_IN_END = 0.3;      // slower
+const HOTSPOT1_HOLD_END = 0.45;        // slower
+const HOTSPOT1_FADE_OUT_END = 0.6;     // slower
+const HOTSPOT345_FADE_IN_START = 0.85; // slower   
 
 function mapRange(value, zoneStart, zoneEnd) {
   if (value <= zoneStart) return 0;
@@ -60,7 +61,7 @@ if (progress <= BLACKBRAIN_FADE_END) {
   }
 
   // Partsbrain fades in as hotspot1 fades out, then stays visible
-  const partsbrainProgress = mapRange(progress, HOTSPOT1_FADE_IN_END, HOTSPOT1_FADE_OUT_END);
+  const blackbrainProgress = mapRange(progress, NICOTINE_FADE_END, BLACKBRAIN_FADE_END);
   if (partsbrainLayer) {
     partsbrainLayer.style.opacity = partsbrainProgress;
   }
