@@ -1,8 +1,8 @@
 // Parallax zoom + hotspot logic
 console.log("Nicotine Effects: The Brain — loaded");
-
 const heroWrapper = document.querySelector(".hero-wrapper");
 const nicotineLayer = document.getElementById("nicotineLayer");
+const blackbrainLayer = document.getElementById("blackbrainLayer");
 const hotspot1 = document.querySelector(".hotspot1");
 const partsbrainLayer = document.getElementById("partsbrainLayer");
 const hotspot3 = document.querySelector(".hotspot3");
@@ -11,9 +11,10 @@ const hotspot5 = document.querySelector(".hotspot5");
 
 // --- Scroll zone boundaries (0 = top of hero, 1 = fully scrolled past) ---
 // Adjust these numbers to retime any stage without touching the logic below.
-const NICOTINE_FADE_END = 0.3;     // 0 -> this: nicotine fades out
-const HOTSPOT1_FADE_IN_END = 0.45; // nicotine end -> this: hotspot1 fades in
-const HOTSPOT1_FADE_OUT_END = 0.65; // -> this: hotspot1 fades out, partsbrain fades in
+const NICOTINE_FADE_END = 0.2;       // 0 -> this: nicotine fades out
+const BLACKBRAIN_FADE_END = 0.3;     // nicotine end -> this: blackbrain fades in
+const HOTSPOT1_FADE_IN_END = 0.45;   // blackbrain end -> this: hotspot1 fades in
+const HOTSPOT1_FADE_OUT_END = 0.65;  // -> this: hotspot1 fades out, partsbrain fades in
 const HOTSPOT345_FADE_IN_START = 0.8; // this -> 1: hotspot3/4/5 fade in
 // (0.65 - 0.8 is a dead zone: partsbrain fully visible, 3/4/5 not yet)
 
@@ -25,12 +26,10 @@ function mapRange(value, zoneStart, zoneEnd) {
 
 function updateHeroFade() {
   if (!heroWrapper || !nicotineLayer) return;
-
   const rect = heroWrapper.getBoundingClientRect();
   const viewportHeight = window.innerHeight;
   const scrolled = -rect.top;
   const maxScroll = heroWrapper.offsetHeight - viewportHeight;
-
   let progress = scrolled / maxScroll;
   progress = Math.min(Math.max(progress, 0), 1);
 
@@ -38,16 +37,21 @@ function updateHeroFade() {
   const nicotineProgress = mapRange(progress, 0, NICOTINE_FADE_END);
   nicotineLayer.style.opacity = 1 - nicotineProgress;
 
-  // Hotspot1: hidden -> fades in -> fades back out
+  // Blackbrain fades in right after nicotine clears
+  const blackbrainProgress = mapRange(progress, NICOTINE_FADE_END, BLACKBRAIN_FADE_END);
+  if (blackbrainLayer) {
+    blackbrainLayer.style.opacity = blackbrainProgress;
+  }
+
+  // Hotspot1: hidden -> fades in (once blackbrain is visible) -> fades back out
   let hotspot1Opacity;
-  if (progress <= NICOTINE_FADE_END) {
+  if (progress <= BLACKBRAIN_FADE_END) {
     hotspot1Opacity = 0;
   } else if (progress <= HOTSPOT1_FADE_IN_END) {
-    hotspot1Opacity = mapRange(progress, NICOTINE_FADE_END, HOTSPOT1_FADE_IN_END);
+    hotspot1Opacity = mapRange(progress, BLACKBRAIN_FADE_END, HOTSPOT1_FADE_IN_END);
   } else {
     hotspot1Opacity = 1 - mapRange(progress, HOTSPOT1_FADE_IN_END, HOTSPOT1_FADE_OUT_END);
   }
-
   if (hotspot1) {
     hotspot1.style.opacity = hotspot1Opacity;
     hotspot1.style.pointerEvents = hotspot1Opacity > 0 ? "auto" : "none";
