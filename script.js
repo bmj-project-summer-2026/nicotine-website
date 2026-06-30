@@ -37,7 +37,7 @@ function updateHeroFade() {
   nicotineLayer.style.opacity = 1 - nicotineProgress;
 
   // Blackbrain fades in right after nicotine clears
-  const blackbrainProgress = mapRange(progress, NICOTINE_FADE_END, BLACKBRAIN_FADE_END);
+  const partsbrainProgress = mapRange(progress, HOTSPOT1_HOLD_END, HOTSPOT1_FADE_OUT_END);
   if (blackbrainLayer) {
     blackbrainLayer.style.opacity = blackbrainProgress;
     blackbrainLayer.style.transform = `scale(${0.85 + blackbrainProgress * 0.15})`;
