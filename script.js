@@ -44,14 +44,16 @@ function updateHeroFade() {
   }
 
   // Hotspot1: hidden -> fades in (once blackbrain is visible) -> fades back out
-  let hotspot1Opacity;
-  if (progress <= BLACKBRAIN_FADE_END) {
-    hotspot1Opacity = 0;
-  } else if (progress <= HOTSPOT1_FADE_IN_END) {
-    hotspot1Opacity = mapRange(progress, BLACKBRAIN_FADE_END, HOTSPOT1_FADE_IN_END);
-  } else {
-    hotspot1Opacity = 1 - mapRange(progress, HOTSPOT1_FADE_IN_END, HOTSPOT1_FADE_OUT_END);
-  }
+ let hotspot1Opacity;
+if (progress <= BLACKBRAIN_FADE_END) {
+  hotspot1Opacity = 0;
+} else if (progress <= HOTSPOT1_FADE_IN_END) {
+  hotspot1Opacity = mapRange(progress, BLACKBRAIN_FADE_END, HOTSPOT1_FADE_IN_END);
+} else if (progress <= HOTSPOT1_HOLD_END) {
+  hotspot1Opacity = 1; // holds steady here — the "delay"
+} else {
+  hotspot1Opacity = 1 - mapRange(progress, HOTSPOT1_HOLD_END, HOTSPOT1_FADE_OUT_END);
+}
   if (hotspot1) {
     hotspot1.style.opacity = hotspot1Opacity;
     hotspot1.style.pointerEvents = hotspot1Opacity > 0 ? "auto" : "none";
