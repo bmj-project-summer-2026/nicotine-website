@@ -139,51 +139,15 @@ body {
   transform: scale(1.15);
 }
 
-/* ---- Homepage: 4-step loop diagram (overlaid on blackbrain) ---- */
-.loop-content {
+.home-loopbrain-layer {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 1000px;
-  height: 1000px;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  z-index: 10;
-  pointer-events: none;
-}
-
-.loop-arrows {
-  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
-}
-
-.loop-step {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 130px;
-}
-
-.loop-step-1 { top: -125px; left: 50%; transform: translateX(-50%); }
-.loop-step-2 { top: 50%; left: calc(50% + 450px); transform: translate(-50%, -50%); }
-.loop-step-3 { top: calc(50% + 350px); left: 50%; transform: translate(-50%, -50%); }
-.loop-step-4 { top: 50%; left: calc(50% - 450px); transform: translate(-50%, -50%); }
-
-.loop-number {
-  font-size: 1.8rem;
-  color: #ce55a5;
-}
-
-.loop-label {
-  font-size: 1rem;
-  margin-top: 0.25rem;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  transform: scale(1.15);
 }
 
 /* ---- Brain page: blackbrain as the static full-screen backdrop ---- */
