@@ -1,28 +1,26 @@
-// Homepage: scroll-triggered brickbrain -> blackbrain fade only.
+// Homepage: scroll-triggered brickbrain -> blackbrain -> loopbrain fade.
 console.log("Homepage loaded");
-
 const homeWrapper = document.querySelector(".home-hero-wrapper");
 const homeBlackbrain = document.getElementById("homeBlackbrainLayer");
-const loopContent = document.getElementById("loopContent");
+const homeLoopbrain = document.getElementById("homeLoopbrainLayer");
 
 function updateHomeFade() {
   if (!homeWrapper || !homeBlackbrain) return;
-
   const rect = homeWrapper.getBoundingClientRect();
   const viewportHeight = window.innerHeight;
   const scrolled = -rect.top;
   const maxScroll = homeWrapper.offsetHeight - viewportHeight;
-
   let progress = scrolled / maxScroll;
   progress = Math.min(Math.max(progress, 0), 1);
 
-  homeBlackbrain.style.opacity = progress;
+  // Blackbrain fades in over the first 60% of scroll
+  const blackProgress = Math.min(Math.max(progress / 0.6, 0), 1);
+  homeBlackbrain.style.opacity = blackProgress;
 
-  // Loop fades in only in the last stretch of the scroll, once
-  // blackbrain is mostly/fully visible underneath it.
-  if (loopContent) {
-    const loopProgress = Math.min(Math.max((progress - 0.7) / 0.3, 0), 1);
-    loopContent.style.opacity = loopProgress;
+  // Loopbrain fades in only after blackbrain is fully visible (last 40%)
+  if (homeLoopbrain) {
+    const loopProgress = Math.min(Math.max((progress - 0.6) / 0.4, 0), 1);
+    homeLoopbrain.style.opacity = loopProgress;
   }
 }
 
